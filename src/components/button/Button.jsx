@@ -1,4 +1,4 @@
-/* import "./styles.css";
+import "./styles.css";
 
 //объект props передаётся как параметр в круглые скобки, при создании компонента
 // const props = {
@@ -7,15 +7,15 @@
 // }
 
 //деструктуризация - 2 вариант ()
-function Button({ name = "SEND" }) {
-  const buttonType = "submit";
+function Button({ name = "SEND", type, onClick }) {
+  // const buttonType = "submit";
   // console.log(props.name);
 
   //деструктуризация 1 вариант
   // const {name} = props;
 
   return (
-    <button className="main-button" type={buttonType}>
+    <button className="main-button" type={type} onClick={onClick}>
       {name}
     </button>
   );
@@ -38,17 +38,3 @@ export default Button;
 
 // //экспорт по умолчанию (он может быть только один в файле)
 // export default Button;
- */
-
-
-import './styles.css';
-
-function Button({ name = "Send email", type = "button" }) {
-  return (
-    <button className="custom-button" type={type}>
-      {name}
-    </button>
-  );
-}
-
-export default Button;
