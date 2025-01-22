@@ -1,5 +1,4 @@
-// components/Feedback.jsx
-import React, { useState } from "react";
+import { useState } from "react";
 import Button from "../Button/Button";
 import "./styles.css";
 
@@ -7,8 +6,8 @@ const Feedback = () => {
   const [likes, setLikes] = useState(0);
   const [dislikes, setDislikes] = useState(0);
 
-  const handleLike = () => setLikes(likes + 1);
-  const handleDislike = () => setDislikes(dislikes + 1);
+  const handleLike = () => setLikes((prevValue) => prevValue + 1);
+  const handleDislike = () => setDislikes((prevValue) => prevValue + 1);
   const resetResults = () => {
     setLikes(0);
     setDislikes(0);
