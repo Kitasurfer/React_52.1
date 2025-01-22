@@ -1,6 +1,6 @@
 import React from 'react';
-import ProfileCard from './ProfileCard';
-import { profiles } from './data';
+import ProfileCard from '../../components/ProfileCard/ProfileCard';
+import { profiles } from '../../components/ProfileCard/data';
 import './styles.css';
 
 const Homework02 = () => {
